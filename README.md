@@ -1,0 +1,1 @@
+# for-kaido-kekasihku
