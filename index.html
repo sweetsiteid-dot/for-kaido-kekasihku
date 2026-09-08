@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Happy Birthday Kaido 💙</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+</head>
+
+<body>
+
+<div id="hearts"></div>
+
+<audio id="music" loop>
+<source src="if-ever-youre-in-my-arms-again.mp3" type="audio/mpeg">
+</audio>
+
+
+<!-- ================================
+     PIN SCREEN
+================================ -->
+
+<div id="pinScreen">
+
+    <div class="pin-box">
+
+        <h1>💙</h1>
+
+        <h2>Private Birthday Gift</h2>
+
+        <p>Only for my special person</p>
+
+        <p>Enter PIN</p>
+
+        <input
+        type="password"
+        id="pinInput"
+        readonly
+        placeholder="••••">
+
+        <div class="keypad">
+
+            <button onclick="addPin('1')">1</button>
+            <button onclick="addPin('2')">2</button>
+            <button onclick="addPin('3')">3</button>
+
+            <button onclick="addPin('4')">4</button>
+            <button onclick="addPin('5')">5</button>
+            <button onclick="addPin('6')">6</button>
+
+            <button onclick="addPin('7')">7</button>
+            <button onclick="addPin('8')">8</button>
+            <button onclick="addPin('9')">9</button>
+
+            <button onclick="clearPin()">⌫</button>
+            <button onclick="addPin('0')">0</button>
+            <button onclick="checkPin()">💙</button>
+
+        </div>
+
+    </div>
+
+</div>
+
+
+<!-- ================================
+     WEBSITE
+================================ -->
+
+<div id="website" class="hidden">
+
+
+<!-- ================================
+     HERO
+================================ -->
+
+<section class="hero">
+
+    <div class="hero-content">
+
+        <p class="small-title">
+            A LITTLE SOMETHING FROM
+        </p>
+
+        <h1>Louis</h1>
+
+        <div class="heart-line">♡</div>
+
+        <h2>Happy Birthday</h2>
+
+        <h3>Kaido, Kekasihku 💙</h3>
+
+        <p class="hero-text">
+            Today is a very special day,
+            because someone very special
+            was born.
+        </p>
+
+        <button onclick="openHeart()">
+            Open My Heart 💙
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     BIRTHDAY MESSAGE
+================================ -->
+
+<section id="bottleSection" class="hidden">
+
+    <h2>A Message From My Heart 💌</h2>
+
+    <p class="tap-text">
+        Tap the bottle
+    </p>
+
+    <div id="bottleArea">
+
+        <div id="bottle" onclick="breakBottle()">
+            🧴
+        </div>
+
+        <div id="flowers"></div>
+
+    </div>
+
+
+    <div id="letterContainer">
+
+        <div class="letter-paper">
+
+            <div class="letter-header">
+                <span>For My Baby 💙</span>
+            </div>
+
+            <div id="letterText"></div>
+
+            <div class="letter-signature">
+                — Louis 🤍
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     GALLERY
+================================ -->
+
+<section class="gallery">
+
+    <p class="section-subtitle">
+        LITTLE PIECES OF US
+    </p>
+
+    <h2>Our Memories 📸</h2>
+
+    <p class="gallery-description">
+        Every picture holds a little memory
+        that I will always keep.
+    </p>
+
+
+    <div class="gallery-grid">
+
+        <img src="photo1.jpg" alt="Memory 1">
+        <img src="photo2.jpg" alt="Memory 2">
+        <img src="photo3.jpg" alt="Memory 3">
+
+        <img src="photo4.jpg" alt="Memory 4">
+        <img src="photo5.jpg" alt="Memory 5">
+        <img src="photo6.jpg" alt="Memory 6">
+
+        <img src="photo7.jpg" alt="Memory 7">
+        <img src="photo8.jpg" alt="Memory 8">
+        <img src="photo9.jpg" alt="Memory 9">
+
+        <img src="photo10.jpg" alt="Memory 10">
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     LOVE QUIZ
+================================ -->
+
+<section class="quiz-section">
+
+    <p class="section-subtitle">
+        ONE LITTLE GAME 💙
+    </p>
+
+    <h2>Love Quiz</h2>
+
+    <p>
+        Answer all questions correctly
+        to unlock your special surprise.
+    </p>
+
+
+    <div id="quizBox">
+
+
+        <!-- QUESTION 1 -->
+
+        <div class="question active">
+
+            <h3>
+                Who is the birthday person
+                in this little website? 💙
+            </h3>
+
+            <button onclick="checkAnswer(this,true)">
+                Kaido 💙
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                Louis
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                Someone Else
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 2 -->
+
+        <div class="question">
+
+            <h3>
+                Who made this birthday gift? 💌
+            </h3>
+
+            <button onclick="checkAnswer(this,false)">
+                Kaido
+            </button>
+
+            <button onclick="checkAnswer(this,true)">
+                Louis 💙
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                Nobody
+            </button>
+
+        </div>
+
+
+        <!-- QUESTION 3 -->
+
+        <div class="question">
+
+            <h3>
+                How much does Louis love Kaido? 🤍
+            </h3>
+
+            <button onclick="checkAnswer(this,false)">
+                A little
+            </button>
+
+            <button onclick="checkAnswer(this,false)">
+                Sometimes
+            </button>
+
+            <button onclick="checkAnswer(this,true)">
+                So, so much 💙
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- QUIZ SUCCESS -->
+
+    <div id="quizSuccess" class="hidden">
+
+        <h2>🎉 You Did It! 🎉</h2>
+
+        <img
+        src="special.jpg"
+        class="special-photo"
+        alt="Special Memory">
+
+        <p>
+            You unlocked the final memory. 💙
+        </p>
+
+        <p>
+            This one is especially for you,
+            Kaido.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- ================================
+     FINAL MESSAGE
+================================ -->
+
+<section class="final">
+
+    <p class="section-subtitle">
+        ONE LAST THING...
+    </p>
+
+    <h2>Happy Birthday 💙</h2>
+
+    <h3>Kaido, Kekasihku</h3>
+
+    <p>
+
+        Happy birthday, my baby. 🤍
+
+        <br><br>
+
+        I hope this new chapter of your life
+        brings you more happiness,
+        more beautiful memories,
+        and more reasons to smile.
+
+        <br><br>
+
+        Whatever happens in the future,
+        I hope you always remember
+        that there is someone who believes
+        in you and supports you.
+
+        <br><br>
+
+        Keep growing into the person
+        you want to become.
+
+        <br><br>
+
+        And don't forget me
+        when you become successful. 🤍
+
+        <br><br>
+
+        Happy 19th birthday,
+        sayangku.
+
+        <br><br>
+
+        I love you so, so much.
+
+        <br><br>
+
+        — Louis 💙
+
+    </p>
+
+</section>
+
+
+<!-- ================================
+     FOOTER
+================================ -->
+
+<footer>
+
+    <p>
+        Made with love by Louis
+    </p>
+
+    <p>
+        For Kaido, my beloved 💙
+    </p>
+
+</footer>
+
+
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+
+</html>
